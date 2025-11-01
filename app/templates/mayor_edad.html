@@ -4,81 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página para Mayores de Edad</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 50px auto;
-            padding: 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            min-height: 100vh;
-        }
-        .container {
-            background-color: rgba(255, 255, 255, 0.95);
-            color: #333;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .welcome-message {
-            background-color: #27ae60;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            font-size: 1.2em;
-        }
-        .user-info {
-            background-color: #ecf0f1;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-            border-left: 5px solid #3498db;
-        }
-        .content {
-            margin: 30px 0;
-            line-height: 1.6;
-        }
-        .feature-list {
-            text-align: left;
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .feature-list li {
-            margin: 10px 0;
-            padding-left: 10px;
-        }
-        .back-btn {
-            background-color: #e74c3c;
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .back-btn:hover {
-            background-color: #c0392b;
-        }
-        .tech-info {
-            background-color: #34495e;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 30px;
-            font-size: 14px;
-        }
-    </style>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="/static/css/mayor_edad.css">
 </head>
 <body>
     <div class="container">
@@ -120,8 +47,13 @@
             • Esta página se carga después de procesar el POST del formulario<br>
             • El servidor verificó que la edad es ≥ 18 años<br>
             • Los datos se pasan a la plantilla usando Jinja2<br>
-            • Ruta: /mayor-edad (GET después de POST)
+            • Ruta: /mayor-edad (GET después de POST)<br>
+            • Estilos externos: <code>/static/css/mayor_edad.css</code><br>
+            • JavaScript interactivo: <code>/static/js/resultados.js</code>
         </div>
     </div>
+
+    <!-- JavaScript externo -->
+    <script src="/static/js/resultados.js"></script>
 </body>
 </html>

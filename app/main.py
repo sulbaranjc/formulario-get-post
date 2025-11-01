@@ -2,6 +2,7 @@
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
 import os
 
 # Crear la instancia de FastAPI
@@ -14,6 +15,10 @@ app = FastAPI(
 # Configurar las plantillas HTML
 # La carpeta templates debe estar en el mismo directorio que main.py
 templates = Jinja2Templates(directory=os.path.join(os.path.dirname(__file__), "templates"))
+
+# Configurar archivos estáticos (CSS y JavaScript)
+# Montar la carpeta static para servir archivos CSS, JS, imágenes, etc.
+app.mount("/static", StaticFiles(directory=os.path.join(os.path.dirname(__file__), "static")), name="static")
 
 # RUTA GET: Página principal con el formulario
 @app.get("/", response_class=HTMLResponse)

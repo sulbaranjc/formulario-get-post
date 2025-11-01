@@ -23,6 +23,15 @@ formulario-get-post/
 │   │   ├── formulario.html  # Página principal con el formulario
 │   │   ├── mayor_edad.html  # Página para mayores de edad
 │   │   └── menor_edad.html  # Página para menores de edad
+│   ├── static/              # Archivos estáticos (CSS, JS, imágenes)
+│   │   ├── css/             # Hojas de estilo
+│   │   │   ├── formulario.css    # Estilos para el formulario
+│   │   │   ├── mayor_edad.css    # Estilos para mayores de edad
+│   │   │   ├── menor_edad.css    # Estilos para menores de edad
+│   │   │   └── validacion.css    # Estilos para validación JS
+│   │   └── js/              # Archivos JavaScript
+│   │       ├── formulario.js     # Lógica para el formulario
+│   │       └── resultados.js     # Lógica para páginas de resultado
 │   └── __pycache__/        # Archivos compilados de Python
 ├── requirements.txt         # Dependencias del proyecto
 └── README.md               # Este archivo de documentación
@@ -96,7 +105,9 @@ formulario-get-post/
 2. **Jinja2**: Motor de plantillas para generar HTML dinámico
 3. **python-multipart**: Para manejar datos de formularios
 4. **HTML Forms**: Formularios web estándar
-5. **CSS**: Estilos para hacer las páginas atractivas
+5. **CSS externo**: Hojas de estilo separadas por página
+6. **JavaScript**: Validación en tiempo real e interactividad
+7. **StaticFiles**: Servir archivos CSS, JS e imágenes
 
 ## 📚 Para los Estudiantes
 
