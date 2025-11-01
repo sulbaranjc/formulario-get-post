@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para Menores de Edad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1 {
+            color: #e67e22;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .welcome-message {
+            background-color: #f39c12;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .user-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #e67e22;
+        }
+        .content {
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        .feature-list {
+            text-align: left;
+            background-color: #fff3cd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #f39c12;
+        }
+        .feature-list li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        .restriction-list {
+            text-align: left;
+            background-color: #f8d7da;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #dc3545;
+        }
+        .restriction-list li {
+            margin: 10px 0;
+            padding-left: 10px;
+            color: #721c24;
+        }
+        .back-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+        .tech-info {
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .years-left {
+            background-color: #3498db;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌟 ¡Hola, Joven Estudiante!</h1>
+        
+        <div class="welcome-message">
+            <strong>¡Bienvenido/a! Tienes acceso a servicios especiales para tu edad</strong>
+        </div>
+
+        <div class="user-info">
+            <h3>📋 Información del Usuario</h3>
+            <p><strong>Nombre:</strong> {{ nombre }}</p>
+            <p><strong>Edad:</strong> {{ edad }} años</p>
+            <p><strong>Estado:</strong> Menor de edad 👶</p>
+        </div>
+
+        <div class="years-left">
+            <strong>⏰ Te faltan {{ 18 - edad }} años para ser mayor de edad</strong>
+        </div>
+
+        <div class="content">
+            <h3>🎯 Servicios Disponibles para Ti</h3>
+            <ul class="feature-list">
+                <li>📚 <strong>Recursos educativos</strong> - Cursos online, bibliotecas digitales</li>
+                <li>🎮 <strong>Videojuegos apropiados</strong> - Contenido clasificado para tu edad</li>
+                <li>🏃‍♂️ <strong>Actividades deportivas</strong> - Equipos juveniles, gimnasios</li>
+                <li>🎨 <strong>Actividades creativas</strong> - Talleres de arte, música, teatro</li>
+                <li>👨‍👩‍👧‍👦 <strong>Programas familiares</strong> - Actividades con supervisión parental</li>
+                <li>🏕️ <strong>Campamentos y excursiones</strong> - Viajes educativos supervisados</li>
+                <li>💻 <strong>Cursos de programación</strong> - Aprende tecnología desde joven</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>🚫 Restricciones por Edad</h3>
+            <ul class="restriction-list">
+                <li>🏦 <strong>Servicios bancarios limitados</strong> - Solo cuentas con supervisión parental</li>
+                <li>🚗 <strong>No alquiler de vehículos</strong> - Hasta cumplir la mayoría de edad</li>
+                <li>🍷 <strong>No compra de alcohol</strong> - Prohibido por ley</li>
+                <li>🎰 <strong>No juegos de apuestas</strong> - Contenido para adultos únicamente</li>
+                <li>📝 <strong>Contratos limitados</strong> - Requiere autorización de padres/tutores</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>💡 Consejo</h3>
+            <p>¡Aprovecha esta etapa para aprender y crecer! Hay muchas oportunidades 
+            fantásticas diseñadas especialmente para jóvenes como tú.</p>
+        </div>
+
+        <a href="/" class="back-btn">← Volver al Formulario</a>
+
+        <div class="tech-info">
+            <strong>🔧 Información Técnica:</strong><br>
+            • Esta página se carga después de procesar el POST del formulario<br>
+            • El servidor verificó que la edad es &lt; 18 años<br>
+            • Los datos se pasan a la plantilla usando Jinja2<br>
+            • Ruta: /menor-edad (GET después de POST)
+        </div>
+    </div>
+</body>
+</html>

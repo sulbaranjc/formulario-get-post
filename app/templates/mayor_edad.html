@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página para Mayores de Edad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .welcome-message {
+            background-color: #27ae60;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .user-info {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #3498db;
+        }
+        .content {
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        .feature-list {
+            text-align: left;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .feature-list li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        .back-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+        .tech-info {
+            background-color: #34495e;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 ¡Bienvenido/a, Mayor de Edad!</h1>
+        
+        <div class="welcome-message">
+            <strong>¡Felicidades! Tienes acceso completo a todos nuestros servicios</strong>
+        </div>
+
+        <div class="user-info">
+            <h3>📋 Información del Usuario</h3>
+            <p><strong>Nombre:</strong> {{ nombre }}</p>
+            <p><strong>Edad:</strong> {{ edad }} años</p>
+            <p><strong>Estado:</strong> Mayor de edad ✅</p>
+        </div>
+
+        <div class="content">
+            <h3>🌟 Servicios Disponibles para Ti</h3>
+            <ul class="feature-list">
+                <li>🏦 <strong>Servicios bancarios completos</strong> - Préstamos, inversiones, tarjetas de crédito</li>
+                <li>🚗 <strong>Alquiler de vehículos</strong> - Autos, motos, camiones</li>
+                <li>🍷 <strong>Compra de bebidas alcohólicas</strong> - Vinos, cervezas, licores</li>
+                <li>🎰 <strong>Entretenimiento para adultos</strong> - Casinos, apuestas deportivas</li>
+                <li>📝 <strong>Contratos legales</strong> - Firmar documentos, abrir empresas</li>
+                <li>🏠 <strong>Servicios inmobiliarios</strong> - Compra, venta, alquiler de propiedades</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>💼 Responsabilidades Legales</h3>
+            <p>Como mayor de edad, tienes plenos derechos y responsabilidades legales. 
+            Puedes tomar decisiones importantes de manera independiente.</p>
+        </div>
+
+        <a href="/" class="back-btn">← Volver al Formulario</a>
+
+        <div class="tech-info">
+            <strong>🔧 Información Técnica:</strong><br>
+            • Esta página se carga después de procesar el POST del formulario<br>
+            • El servidor verificó que la edad es ≥ 18 años<br>
+            • Los datos se pasan a la plantilla usando Jinja2<br>
+            • Ruta: /mayor-edad (GET después de POST)
+        </div>
+    </div>
+</body>
+</html>
